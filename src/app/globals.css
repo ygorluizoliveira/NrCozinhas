@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6fb;
+  --foreground: rgb(21, 42, 108);
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: #ffffff;
+  --line: rgba(21, 42, 108, 0.14);
+  --accent: rgb(181, 54, 65);
+  --accent-strong: rgb(149, 33, 43);
+  --accent-soft: rgba(181, 54, 65, 0.12);
+  --brand-blue: rgb(21, 42, 108);
+  --brand-red: rgb(181, 54, 65);
+  --brand-blue-soft: rgba(21, 42, 108, 0.08);
+  --sand: #dbe2f3;
+  --shadow: 0 24px 80px rgba(21, 42, 108, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-playfair-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(181, 54, 65, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(21, 42, 108, 0.14), transparent 32%),
+    linear-gradient(180deg, #f8faff 0%, #f4f6fb 45%, #eef2fa 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(181, 54, 65, 0.24);
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.section-shell {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 248, 255, 0.9));
+  box-shadow: var(--shadow);
+}
+
+.display-font {
+  font-family: arial;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(21, 42, 108, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 42, 108, 0.06) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.brand-nav {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(21, 42, 108, 0.12);
+  box-shadow: 0 16px 40px rgba(21, 42, 108, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.fixed-cta-shell {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(21, 42, 108, 0.12);
+  box-shadow: 0 -12px 32px rgba(21, 42, 108, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-rise {
+  animation: rise-in 0.8s ease-out both;
+}
+
+.stagger-rise:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.stagger-rise:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.stagger-rise:nth-child(4) {
+  animation-delay: 0.24s;
+}

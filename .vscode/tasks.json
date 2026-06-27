@@ -1,0 +1,253 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Initial build validation",
+			"type": "shell",
+			"command": "C:\\Progra~1\\nodejs\\node.exe",
+			"args": [
+				"C:\\Progra~1\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Repair npm install",
+			"type": "shell",
+			"command": "C:\\Progra~1\\nodejs\\node.exe",
+			"args": [
+				"C:\\Progra~1\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Remove corrupted next package",
+			"type": "shell",
+			"command": "Remove-Item",
+			"args": [
+				"-LiteralPath",
+				".\\node_modules\\next",
+				"-Recurse",
+				"-Force"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Reinstall dependencies",
+			"type": "shell",
+			"command": "C:\\Progra~1\\nodejs\\node.exe",
+			"args": [
+				"C:\\Progra~1\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Remove node_modules",
+			"type": "shell",
+			"command": "Remove-Item",
+			"args": [
+				"-LiteralPath",
+				".\\node_modules",
+				"-Recurse",
+				"-Force"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Force remove node_modules",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"rmdir",
+				"/s",
+				"/q",
+				"node_modules"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Kill lingering node processes",
+			"type": "shell",
+			"command": "taskkill",
+			"args": [
+				"/F",
+				"/IM",
+				"node.exe"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Force remove node_modules again",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"rmdir",
+				"/s",
+				"/q",
+				"node_modules"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Clean npm install",
+			"type": "shell",
+			"command": "C:\\Progra~1\\nodejs\\node.exe",
+			"args": [
+				"C:\\Progra~1\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Kill node before verbose install",
+			"type": "shell",
+			"command": "taskkill",
+			"args": [
+				"/F",
+				"/IM",
+				"node.exe"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Verbose npm install",
+			"type": "shell",
+			"command": "C:\\Progra~1\\nodejs\\node.exe",
+			"args": [
+				"C:\\Progra~1\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install",
+				"--verbose"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Direct Next build",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Reinstall Next SWC binary",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				"C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install",
+				"@next/swc-win32-x64-msvc@16.2.6",
+				"--save-dev"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Direct Next build retry",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate branded homepage",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate homepage with real logo",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate carousel homepage",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate structural remodel",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate structural remodel 2",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Validate rebuilt homepage",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				".\\node_modules\\next\\dist\\bin\\next",
+				"build"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Install lucide-react",
+			"type": "shell",
+			"command": "C:\\Program Files\\nodejs\\node.exe",
+			"args": [
+				"C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+				"install",
+				"lucide-react"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
