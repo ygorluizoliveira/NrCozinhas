@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -13,9 +13,14 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NR Passos Cozinhas | Ambientes planejados sob medida",
+  title: "NR Cozinhas | Ambientes planejados sob medida",
   description:
-    "Site institucional responsivo para exposicao de mercadorias e solicitacao de orcamentos da NR Passos Cozinhas.",
+    "Site institucional responsivo para exposicao de mercadorias e solicitacao de orcamentos da NR Cozinhas.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

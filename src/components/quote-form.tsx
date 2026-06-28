@@ -5,7 +5,6 @@ import { whatsappUrl } from "@/lib/contact";
 
 type FormState = {
   name: string;
-  phone: string;
   environment: string;
   budget: string;
   details: string;
@@ -13,7 +12,6 @@ type FormState = {
 
 const initialState: FormState = {
   name: "",
-  phone: "",
   environment: "Cozinha planejada",
   budget: "A definir",
   details: "",
@@ -29,10 +27,9 @@ export function QuoteForm() {
       "Olá, gostaria de solicitar um orçamento.",
       "",
       `Nome: ${form.name}`,
-      `Telefone: ${form.phone}`,
       `Ambiente: ${form.environment}`,
       `Faixa de investimento: ${form.budget}`,
-      `Detalhes: ${form.details || "Nao informado"}`,
+      `Detalhes: ${form.details || "Não informado"}`,
     ].join("\n");
 
     window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
@@ -61,17 +58,6 @@ export function QuoteForm() {
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-black/78">
-          Telefone
-          <input
-            required
-            className="rounded-2xl border border-[color:var(--line)] bg-white px-4 py-3 outline-none transition focus:border-[color:var(--brand-blue)]"
-            value={form.phone}
-            onChange={(event) => setForm((current) => ({ ...current, phone: event.target.value }))}
-            placeholder="(11) 99999-9999"
-          />
-        </label>
-
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-medium text-black/78">
             Ambiente
@@ -83,8 +69,8 @@ export function QuoteForm() {
               }
             >
               <option>Cozinha planejada</option>
-              <option>Area gourmet</option>
-              <option>Painel e armarios</option>
+                <option>Área gourmet</option>
+                <option>Painel e armários</option>
               <option>Outro ambiente</option>
             </select>
           </label>
@@ -97,7 +83,7 @@ export function QuoteForm() {
               onChange={(event) => setForm((current) => ({ ...current, budget: event.target.value }))}
             >
               <option>A definir</option>
-              <option>Ate R$ 10 mil</option>
+                <option>Até R$ 10 mil</option>
               <option>Entre R$ 10 mil e R$ 25 mil</option>
               <option>Acima de R$ 25 mil</option>
             </select>
@@ -111,20 +97,16 @@ export function QuoteForm() {
             className="rounded-2xl border border-[color:var(--line)] bg-white px-4 py-3 outline-none transition focus:border-[color:var(--brand-blue)]"
             value={form.details}
             onChange={(event) => setForm((current) => ({ ...current, details: event.target.value }))}
-            placeholder="Descreva medidas, estilo desejado, prazo ou referencias."
+            placeholder="Descreva medidas, estilo desejado, prazo ou referências."
           />
         </label>
 
         <button
           type="submit"
-          className="mt-2 rounded-full bg-[color:var(--brand-red)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[color:var(--accent-strong)]"
+          className="button-brand mt-2 px-6 py-3 text-sm font-semibold"
         >
           Enviar dados pelo WhatsApp
         </button>
-
-        <p className="text-xs leading-6 text-black/55">
-          Ajuste o numero em <code>src/components/quote-form.tsx</code> para o WhatsApp oficial da empresa.
-        </p>
       </form>
     </div>
   );

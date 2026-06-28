@@ -31,6 +31,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 150px;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -95,6 +99,34 @@ select {
   backdrop-filter: blur(18px);
 }
 
+.fixed-cta-shell > a {
+  color: #fff;
+}
+
+.button-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand-blue);
+  color: #fff;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.button-brand:hover {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.button-brand:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 3px;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -104,6 +136,18 @@ select {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes carousel-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.992);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -121,4 +165,17 @@ select {
 
 .stagger-rise:nth-child(4) {
   animation-delay: 0.24s;
+}
+
+.carousel-fade {
+  animation: carousel-fade 420ms ease-out both;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

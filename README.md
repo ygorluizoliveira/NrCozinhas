@@ -1,4 +1,4 @@
-# NR Passos Cozinhas
+# NR Cozinhas
 
 Base profissional em React para um site responsivo de exposicao de mercadorias com solicitacao de orcamento, sem checkout online.
 
