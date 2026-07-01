@@ -7,7 +7,7 @@ export function SiteHeader() {
   return (
     <section className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-white/95 px-0 pt-0">
       <div className="w-full bg-[color:var(--brand-red)] text-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto] items-center gap-2 px-3 py-1.5 text-[10px] font-medium leading-tight sm:px-8 sm:py-2 sm:text-xs lg:px-12">
+        <div className="grid w-full grid-cols-[1fr_auto] items-center gap-2 px-3 py-1 text-[10px] font-medium leading-tight sm:px-8 sm:py-1.5 sm:text-xs lg:px-12">
           <div className="min-w-0">
             <a
               href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")}
@@ -26,10 +26,10 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-3 py-2.5 sm:px-8 sm:py-3 lg:px-12">
-        <div className="rounded-[1.5rem] bg-white px-3 py-2.5 shadow-[var(--shadow)] sm:rounded-[2rem] sm:px-6 sm:py-3.5 lg:px-8">
-          <div className="flex items-center justify-between gap-3">
-            <a href="#inicio" className="block w-[5.75rem] shrink-0 rounded-full sm:w-[6.1rem] lg:w-[6.4rem]">
+      <div className="w-full px-3 py-1.5 sm:px-8 sm:py-2 lg:px-12">
+        <div className="rounded-[1.25rem] bg-white px-3 py-1.5 shadow-[var(--shadow)] sm:rounded-[1.6rem] sm:px-6 sm:py-2.5 lg:px-8">
+          <div className="flex items-center justify-between gap-2.5">
+            <a href="#inicio" className="block w-[4.7rem] shrink-0 sm:w-[5rem] lg:w-[5.2rem]">
               <LogoMark className="w-full" />
             </a>
 

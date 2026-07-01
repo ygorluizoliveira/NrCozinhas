@@ -2,8 +2,8 @@ import { processSteps } from "@/data/home-content";
 
 export function ProcessSection() {
   return (
-    <section className="px-5 py-10 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-7xl rounded-[2rem] bg-[color:var(--brand-blue)] px-6 py-8 text-white shadow-[var(--shadow)] sm:px-8 lg:px-10">
+    <section className="w-full px-4 py-10 sm:px-6 lg:px-8">
+      <div className="w-full rounded-[2rem] bg-[color:var(--brand-blue)] px-6 py-8 text-white shadow-[var(--shadow)] sm:px-8 lg:px-10">
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Processo de atendimento</p>
           <h2 className="display-font mt-3 text-3xl leading-tight sm:text-4xl">

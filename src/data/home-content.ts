@@ -7,8 +7,7 @@ import {
 } from "lucide-react";
 
 export const menuItems = [
-  { label: "Sobre a NR Cozinhas", href: "#institucional", icon: Info },
-  { label: "Linha de Produtos", href: "#linhas", icon: Grid2x2 },
+  { label: "Catalogo de Equipamentos", href: "#catalogo", icon: Grid2x2 },
   { label: "Cozinhas Profissionais", href: "#equipamentos", icon: ChefHat },
   { label: "Nossos Clientes", href: "#clientes", icon: Users },
   { label: "Orçamento", href: "#orcamento", icon: ClipboardList },

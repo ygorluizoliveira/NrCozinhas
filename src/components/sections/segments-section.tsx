@@ -3,8 +3,8 @@ import { whatsappUrl } from "@/lib/contact";
 
 export function SegmentsSection() {
   return (
-    <section className="px-5 py-10 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(241,246,255,0.92))] px-6 py-8 shadow-[var(--shadow)] sm:px-8 lg:px-10">
+    <section className="w-full px-4 py-10 sm:px-6 lg:px-8">
+      <div className="w-full rounded-[2rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(241,246,255,0.92))] px-6 py-8 shadow-[var(--shadow)] sm:px-8 lg:px-10">
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">Segmentos atendidos</p>
           <h2 className="display-font mt-3 text-3xl leading-tight text-[color:var(--brand-blue)] sm:text-4xl">

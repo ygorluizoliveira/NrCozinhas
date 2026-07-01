@@ -1,22 +1,45 @@
+import { ArrowRight } from "lucide-react";
 import { whatsappUrl } from "@/lib/contact";
 
 export function FixedCtaBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 px-3 pb-3 sm:px-8 lg:px-12">
-      <div className="fixed-cta-shell mx-auto grid max-w-7xl grid-cols-2 gap-2 rounded-[1.25rem] p-2 sm:gap-2.5 sm:p-3">
-        <a
-          href={whatsappUrl("Olá, quero falar com um consultor da NR Cozinhas.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button-brand px-3 py-2 text-center text-[12px] font-semibold sm:px-5 sm:py-2.5 sm:text-sm"
-        >
-          <span className="sm:hidden">WhatsApp</span>
-          <span className="hidden sm:inline">Fale com consultor</span>
-        </a>
-        <a href="#orcamento" className="button-brand px-3 py-2 text-center text-[12px] font-semibold sm:px-5 sm:py-2.5 sm:text-sm">
-          <span className="sm:hidden">Orçamento</span>
-          <span className="hidden sm:inline">Orçamento de Projetos</span>
-        </a>
+    <div className="fixed bottom-0 left-0 right-0 z-50 w-full px-3 pb-3 sm:px-6 lg:px-8">
+      <div className="w-full rounded-2xl border border-black/10 bg-[#e6e6e9] px-4 py-4 shadow-[0_-14px_36px_rgba(15,23,42,0.14)] sm:px-6 sm:py-5">
+        <div className="grid items-center justify-items-center gap-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
+          <div className="mx-auto text-center">
+            <p className="text-[clamp(1.35rem,2.2vw,2rem)] font-normal leading-tight">
+              <span className="text-[color:var(--brand-blue)]">Solicite seu Orçamento!</span>
+            </p>
+          </div>
+
+          <div className="grid w-full max-w-[680px] gap-3 sm:grid-cols-2 lg:min-w-[620px]">
+            <a
+              href={whatsappUrl("Olá, quero falar com um consultor da NR Cozinhas.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-pulse inline-flex min-h-14 items-center justify-center gap-2 rounded-[0.6rem] bg-[#1f8f5b] px-6 text-base font-semibold !text-[#f4f6fb] transition hover:bg-[#17784b]"
+              style={{ color: "#f4f6fb" }}
+            >
+              <span>Fale com um dos nossos consultores</span>
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
+                <svg width="20" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M18.6904 14.6093C18.6992 14.6138 18.7079 14.6183 18.7165 14.6227L18.6904 14.6093Z" fill="currentColor" />
+                  <path d="M8.20979 12.3628C8.19186 12.3393 8.17132 12.3127 8.15248 12.2918C8.06576 12.1756 7.78152 11.7835 7.51631 11.2401C7.24304 10.6802 6.9972 9.97434 6.9972 9.25247C6.9972 7.99938 7.57416 7.34225 7.89315 6.97894C7.92847 6.93871 7.96062 6.90209 7.98848 6.86865C8.20992 6.60294 8.46957 6.55945 8.65164 6.55945H9.1973C9.22178 6.55945 9.24419 6.55922 9.26325 6.55901C9.35178 6.55806 9.38866 6.55766 9.43758 6.58356C9.49362 6.61323 9.5914 6.69889 9.71988 6.9794C9.83237 7.28739 10.0515 7.80745 10.2473 8.26661L10.3821 8.58202C10.5212 8.90734 10.6262 9.15284 10.6445 9.20767C10.6982 9.36878 10.7248 9.4601 10.6556 9.5985L10.6539 9.60202C10.4226 10.0877 10.1748 10.3399 9.98671 10.5313C9.96571 10.5527 9.94545 10.5733 9.92605 10.5934C9.83469 10.688 9.72723 10.8037 9.68777 10.9516C9.64361 11.1172 9.69299 11.2751 9.78812 11.4339C10.3993 12.4619 11.0018 13.1647 11.6863 13.7222C12.3665 14.2761 13.12 14.6801 14.021 15.1171C14.1787 15.2103 14.3324 15.2567 14.4933 15.2353C14.6497 15.2144 14.7804 15.1328 14.8962 15.0459L14.9196 15.0284L14.937 15.0051C14.9876 14.9377 15.081 14.8222 15.1925 14.6842C15.2565 14.6051 15.3265 14.5184 15.3978 14.4294C15.5842 14.1964 15.7834 13.9413 15.8753 13.7896C15.9619 13.6611 16.0235 13.6413 16.0617 13.6368C16.1201 13.6299 16.198 13.6496 16.3379 13.7056C16.5999 13.8104 18.0498 14.5081 18.3927 14.6791C18.4643 14.7218 18.5315 14.7571 18.5905 14.7874L18.6253 14.8053C18.672 14.8292 18.7104 14.8488 18.7449 14.8685C18.8339 14.9194 18.842 14.9418 18.8438 14.9472L18.8591 14.9929L18.8808 15.0146C18.8848 15.0262 18.8899 15.0468 18.8941 15.078C18.9027 15.1424 18.905 15.2347 18.8955 15.3513C18.8767 15.5835 18.8131 15.8924 18.683 16.2306C18.5702 16.5239 18.2469 16.8359 17.8542 17.0889C17.4633 17.3406 17.0579 17.4993 16.8306 17.522L16.8174 17.5238C16.341 17.6032 15.9288 17.6282 15.4054 17.5313C14.8761 17.4332 14.2241 17.2088 13.2734 16.7742L13.269 16.7722C11.7744 16.1317 10.5396 15.0603 9.65425 14.1209C9.21251 13.6522 8.85987 13.2186 8.60729 12.8917C8.48099 12.7282 8.37979 12.5915 8.30438 12.4897L8.3034 12.4883C8.26641 12.4384 8.23476 12.3956 8.20979 12.3628Z" fill="currentColor" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M21.3512 3.54619L21.3529 3.54793C23.6157 5.81075 25.0102 8.76701 25.0102 11.9856C25.0102 18.5387 19.529 23.9165 12.9153 23.9165C10.9299 23.9165 8.9939 23.3799 7.21456 22.4633L7.14558 22.4277L1.0137 24L2.63921 17.9699L2.59702 17.8966C1.57523 16.1219 0.984375 14.0796 0.984375 11.9309C0.984375 5.37484 6.35922 0 12.9153 0C16.1397 0 19.1482 1.2895 21.3512 3.54619ZM4.21301 17.4474L4.2172 17.4544L4.43848 17.7642L3.32952 21.7331L7.41304 20.6248L7.66385 20.792L7.67384 20.7982C9.28891 21.745 11.0735 22.2475 12.9153 22.2475C18.5999 22.2475 23.3412 17.6227 23.3412 11.9856C23.3412 9.19326 22.168 6.62823 20.2203 4.68054C18.269 2.72919 15.7026 1.66902 12.9699 1.66902C7.28243 1.66902 2.65339 6.29661 2.65339 11.9309C2.65339 13.8833 3.21126 15.7779 4.21301 17.4474Z" fill="currentColor" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#orcamento"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-[0.6rem] bg-[#152a6c] px-6 text-base font-semibold !text-[#f4f6fb] transition hover:bg-[#102155]"
+              style={{ color: "#f4f6fb" }}
+            >
+              <span>Projeto de Cozinha Industrial</span>
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

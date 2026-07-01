@@ -3,8 +3,8 @@ import { whatsappUrl } from "@/lib/contact";
 
 export function FaqSection() {
   return (
-    <section className="px-5 py-10 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-[color:var(--line)] bg-white px-6 py-8 shadow-[var(--shadow)] sm:px-8 lg:px-10">
+    <section className="w-full px-4 py-10 sm:px-6 lg:px-8">
+      <div className="w-full rounded-[2rem] border border-[color:var(--line)] bg-white px-6 py-8 shadow-[var(--shadow)] sm:px-8 lg:px-10">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">Dúvidas frequentes</p>
