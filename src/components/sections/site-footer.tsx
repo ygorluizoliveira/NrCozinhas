@@ -42,20 +42,19 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-5xl font-semibold leading-[1.05] tracking-tight text-[#1b2030]">Unidades</h3>
+            <h3 className="text-5xl font-semibold leading-[1.05] tracking-tight text-[#1b2030]">Atendimento</h3>
             <ul className="mt-6 grid gap-3 text-[1.06rem] text-[#1d2435]">
-              <li>São Paulo</li>
-              <li>Rio de Janeiro</li>
-              <li>Espírito Santo</li>
-              <li>Pernambuco</li>
+              <li>Não operamos com loja física.</li>
+              <li>Atendimento comercial por agendamento.</li>
+              <li>Visita técnica no local do cliente.</li>
+              <li>Cobertura em diferentes regiões do Brasil.</li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-5xl font-semibold leading-[1.05] tracking-tight text-[#1b2030]">Fale Conosco</h3>
             <ul className="mt-6 grid gap-3 text-[1.06rem] text-[#1d2435]">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> <span>(21) 2564-2001</span></li>
-              <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> <a href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")} target="_blank" rel="noopener noreferrer">(21) 97215-7105</a></li>
+              <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> <a href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")} target="_blank" rel="noopener noreferrer">(21) 96914-6705</a></li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <span>contato@nrcozinhas.com.br</span></li>
               <li className="flex items-center gap-2"><Clock3 className="h-4 w-4" /> <span>Seg à Sex 08:00 às 17:00</span></li>
               <li className="flex items-center gap-2"><Settings className="h-4 w-4" /> <span>Assistência Técnica</span></li>
