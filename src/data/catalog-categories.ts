@@ -5,6 +5,7 @@ export type CatalogCategory = {
   cardDescription: string;
   pageTitle: string;
   pageSubtitle: string;
+  pageLead: string;
   pageDescription: string;
   highlights: string[];
   applications: string[];
@@ -20,13 +21,14 @@ export const catalogCategories: CatalogCategory[] = [
     cardTitle: "Coccao",
     cardDescription:
       "Equipamentos de alta performance para preparo profissional de alimentos com eficiencia e seguranca.",
-    pageTitle: "Coccao para Cozinha Industrial",
-    pageSubtitle: "NR Cozinhas Profissionais",
+    pageTitle: "Cocção Para\nCozinha Industrial",
+    pageSubtitle: "Equipamentos de alta performance",
+    pageLead: "para resultados profissionais.",
     pageDescription:
-      "Explore nossa linha de coccao e encontre equipamentos profissionais para cozinhas industriais, como fornos, fogoes e chapas. Produtos robustos e eficientes para garantir alto desempenho na preparacao de alimentos.",
+      "Equipamentos de alta performance para resultados profissionais.",
     highlights: ["Alta producao", "Controle termico", "Operacao continua"],
     applications: ["Restaurantes", "Hoteis", "Cozinhas industriais"],
-    image: "/products/fogoes-real.jpg",
+    image: "/img/cocao.png",
     ctaMessage: "Olá, quero falar com um consultor sobre equipamentos de coccao.",
     iconKey: "coccao",
   },
@@ -36,13 +38,14 @@ export const catalogCategories: CatalogCategory[] = [
     cardTitle: "Refrigeracao",
     cardDescription:
       "Solucoes completas para conservacao de alimentos e bebidas com qualidade e maxima eficiencia.",
-    pageTitle: "Refrigeracao para Cozinha Industrial",
-    pageSubtitle: "NR Cozinhas Profissionais",
+    pageTitle: "Refrigeração Para\nCozinha Industrial",
+    pageSubtitle: "Equipamentos de alta performance",
+    pageLead: "para conservação e eficiência.",
     pageDescription:
-      "Garanta controle termico e conservacao ideal com equipamentos de refrigeracao para operacoes profissionais. Solucoes para armazenamento seguro, rotina intensa e melhor aproveitamento de insumos.",
+      "Soluções completas em equipamentos de refrigeração que mantêm alimentos e bebidas na temperatura ideal, com tecnologia, durabilidade e economia de energia para o dia a dia da sua operação.",
     highlights: ["Conservacao eficiente", "Baixo desperdicio", "Seguranca alimentar"],
     applications: ["Camara fria", "Estoque refrigerado", "Exposicao de bebidas"],
-    image: "/products/coifas-real.jpg",
+    image: "/img/refrigeracao.png",
     ctaMessage: "Olá, quero falar com um consultor sobre equipamentos de refrigeracao.",
     iconKey: "refrigeracao",
   },
@@ -51,13 +54,14 @@ export const catalogCategories: CatalogCategory[] = [
     name: "Mobiliarios",
     cardTitle: "Mobiliarios",
     cardDescription: "Mobiliarios em aco inox desenvolvidos para unir funcionalidade, resistencia e organizacao.",
-    pageTitle: "Mobiliarios para Cozinha Industrial",
-    pageSubtitle: "NR Cozinhas Profissionais",
+    pageTitle: "Mobiliários para\nCozinha Industrial",
+    pageSubtitle: "Funcionalidade, resistência e",
+    pageLead: "organização para o seu espaço.",
     pageDescription:
-      "Estruture sua operacao com mobiliarios tecnicos em inox para preparo, apoio e fluxo de trabalho. Equipamentos pensados para higiene, durabilidade e produtividade no dia a dia.",
+      "Mobiliários em aço inox desenvolvidos para otimizar o fluxo de trabalho, garantir higiene e oferecer máxima durabilidade no dia a dia da sua cozinha.",
     highlights: ["Estrutura em inox", "Alta durabilidade", "Facil higienizacao"],
     applications: ["Bancadas", "Mesas de apoio", "Areas de preparo"],
-    image: "/products/inox-real.jpg",
+    image: "/img/mobiliarios.png",
     ctaMessage: "Olá, quero falar com um consultor sobre mobiliarios para cozinha industrial.",
     iconKey: "mobiliarios",
   },
@@ -66,13 +70,14 @@ export const catalogCategories: CatalogCategory[] = [
     name: "Utensilios de Cozinha",
     cardTitle: "Utensilios de Cozinha",
     cardDescription: "Utensilios profissionais que oferecem praticidade e durabilidade para a operacao diaria.",
-    pageTitle: "Utensilios para Cozinha Industrial",
-    pageSubtitle: "NR Cozinhas Profissionais",
+    pageTitle: "Utensílios Para\nCozinha Industrial",
+    pageSubtitle: "Praticidade, resistência e qualidade",
+    pageLead: "em cada detalhe.",
     pageDescription:
-      "Tenha mais agilidade e padrao de execucao com utensilios adequados para cozinhas profissionais. Itens resistentes para preparo, distribuicao e apoio em diferentes tipos de operacao.",
+      "Utensílios profissionais desenvolvidos para facilitar o dia a dia da sua cozinha, com materiais duráveis e seguros que garantem mais eficiência, higiene e desempenho em cada preparo.",
     highlights: ["Praticidade diaria", "Qualidade profissional", "Maior agilidade"],
     applications: ["Preparo", "Distribuicao", "Finalizacao"],
-    image: "/products/utensilios-real.jpg",
+    image: "/img/utensilios.png",
     ctaMessage: "Olá, quero falar com um consultor sobre utensilios profissionais.",
     iconKey: "utensilios",
   },
@@ -81,13 +86,14 @@ export const catalogCategories: CatalogCategory[] = [
     name: "Fornos Combinados",
     cardTitle: "Fornos Combinados",
     cardDescription: "Tecnologia avancada que combina coccao, vapor e precisao para resultados consistentes.",
-    pageTitle: "Fornos Combinados para Cozinha Industrial",
-    pageSubtitle: "NR Cozinhas Profissionais",
+    pageTitle: "Fornos Combinados\nPara Cozinha Industrial",
+    pageSubtitle: "Versatilidade, precisão e performance",
+    pageLead: "para resultados superiores.",
     pageDescription:
-      "Aprimore o desempenho da producao com fornos combinados que entregam controle, padronizacao e eficiencia energetica. Solucao ideal para operacoes que exigem constancia e qualidade final.",
+      "Tecnologia que combina cocção a vapor e ar quente em um único equipamento, proporcionando mais produtividade, padronização e qualidade em cada preparo. Ideal para cozinhas que exigem o máximo desempenho.",
     highlights: ["Padronizacao", "Versatilidade", "Eficiencia energetica"],
     applications: ["Assados", "Coccao a vapor", "Finalizacao de pratos"],
-    image: "/products/fogoes-real.jpg",
+    image: "/img/fornos_combinados.png",
     ctaMessage: "Olá, quero falar com um consultor sobre fornos combinados.",
     iconKey: "fornos",
   },

@@ -37,36 +37,50 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <section className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-[#f5f6f8] px-5 py-7 shadow-[0_20px_44px_rgba(15,23,42,0.1)] sm:px-7 lg:px-10 lg:py-9">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.04fr]">
           <div>
-            <h1 className="text-4xl font-semibold leading-[1.04] text-[#271f24] sm:text-5xl lg:text-6xl">{category.pageTitle}</h1>
-            <p className="mt-3 text-3xl font-medium text-[color:var(--brand-blue)] sm:text-4xl">{category.pageSubtitle}</p>
-
-            <p className="mt-7 max-w-2xl text-lg leading-9 text-black/82">{category.pageDescription}</p>
-
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {category.highlights.map((highlight) => (
+            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+              {category.pageTitle.split("\n").map((line, index) => (
                 <span
-                  key={`${category.slug}-${highlight}`}
-                  className="rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--brand-blue)]"
+                  key={`${category.slug}-title-${index}`}
+                  className={`block ${index === 1 ? "text-[color:var(--brand-red)]" : "text-[#1f3b7d]"}`}
                 >
-                  {highlight}
+                  {line}
                 </span>
               ))}
-            </div>
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-[1.05rem] leading-8 text-[#1f3b7d] sm:text-lg">
+              <span className="block">{category.pageSubtitle}</span>
+              <span className="block">{category.pageLead}</span>
+            </p>
+
+            <span className="mt-6 block h-[2px] w-40 rounded-full bg-[color:var(--brand-red)]" />
+
+            <p className="mt-7 max-w-2xl text-[1.05rem] leading-8 text-[#1f3b7d] sm:text-lg">
+              {slug === "coccao" ? (
+                <>
+                  Soluções completas em equipamentos de cocção que
+                  unem tecnologia, eficiência e durabilidade para o dia a
+                  dia da sua operação. Mais produtividade, segurança e
+                  qualidade em cada preparo.
+                </>
+              ) : (
+                category.pageDescription
+              )}
+            </p>
 
             <a
               href={whatsappUrl(category.ctaMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-9 inline-flex items-center gap-2 rounded-lg bg-[#1f8f5b] px-6 py-3 text-lg font-semibold text-white transition hover:bg-[#187649]"
+              className="mt-9 inline-flex items-center gap-2 rounded-xl bg-[#1f8f5b] px-6 py-3 text-lg font-semibold text-white transition hover:bg-[#187649]"
             >
               <Image src="/icons/whats.jpg" alt="" width={20} height={20} className="h-5 w-5 rounded-sm object-cover" />
-              Fale com um Consultor
+              <span className="text-white">Fale com um dos nossos consultores</span>
             </a>
           </div>
 
           <div className="relative min-h-[300px] sm:min-h-[360px]">
-            <div className="pointer-events-none absolute left-[8%] right-[8%] top-[4%] h-[32%] border-x-2 border-t-2 border-[color:var(--brand-red)]" />
-            <div className="pointer-events-none absolute bottom-[2%] left-[4%] right-[4%] h-[30%] border-x-2 border-b-2 border-[color:var(--brand-red)]" />
+            <div className="pointer-events-none absolute inset-[7%] rounded-[1.5rem] border-2 border-[color:var(--brand-red)]" />
 
             <Image
               src={category.image}
