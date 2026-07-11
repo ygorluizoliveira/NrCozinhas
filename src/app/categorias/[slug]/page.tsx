@@ -37,7 +37,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <section className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-[#f5f6f8] px-5 py-7 shadow-[0_20px_44px_rgba(15,23,42,0.1)] sm:px-7 lg:px-10 lg:py-9">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.04fr]">
           <div>
-            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
               {category.pageTitle.split("\n").map((line, index) => (
                 <span
                   key={`${category.slug}-title-${index}`}
@@ -80,13 +80,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
 
           <div className="relative min-h-[300px] sm:min-h-[360px]">
-            <div className="pointer-events-none absolute inset-[7%] rounded-[1.5rem] border-2 border-[color:var(--brand-red)]" />
+            <div className="pointer-events-none absolute inset-[7%] z-10 rounded-[1.5rem] border-2 border-[color:var(--brand-red)]" />
 
             <Image
               src={category.image}
               alt={category.name}
               fill
-              className="object-contain"
+              className={slug === "refrigeracao" ? "z-0 object-contain mix-blend-multiply" : "z-0 object-contain"}
               sizes="(max-width: 1024px) 100vw, 55vw"
               priority
             />
