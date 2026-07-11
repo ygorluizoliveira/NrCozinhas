@@ -32,7 +32,7 @@ export function FixedCtaBar() {
                 className="whatsapp-pulse inline-flex min-h-14 items-center justify-center gap-2 rounded-[0.6rem] bg-[#1f8f5b] px-6 text-base font-semibold !text-[#f4f6fb] transition hover:bg-[#17784b]"
                 style={{ color: "#f4f6fb" }}
               >
-                <span>Fale com um dos nossos consultores</span>
+                <span>Fale com um consultor</span>
                 <Image src="/icons/whats.jpg" alt="" width={20} height={20} className="h-5 w-5 rounded-sm object-cover" />
               </a>
 

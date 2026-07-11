@@ -75,7 +75,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               className="mt-9 inline-flex items-center gap-2 rounded-xl bg-[#1f8f5b] px-6 py-3 text-lg font-semibold text-white transition hover:bg-[#187649]"
             >
               <Image src="/icons/whats.jpg" alt="" width={20} height={20} className="h-5 w-5 rounded-sm object-cover" />
-              <span className="text-white">Fale com um dos nossos consultores</span>
+              <span className="text-white">Fale com um consultor</span>
             </a>
           </div>
 
