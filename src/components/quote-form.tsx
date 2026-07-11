@@ -49,7 +49,7 @@ export function QuoteForm() {
   return (
     <div className="overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-white shadow-[0_24px_56px_rgba(21,42,108,0.12)]">
       <div className="grid lg:grid-cols-[1.06fr_0.94fr]">
-        <aside className="relative min-h-[580px] overflow-hidden bg-[#142a63]">
+        <aside className="relative min-h-[580px] overflow-hidden bg-[#142a63] max-[425px]:min-h-[430px] max-[425px]:bg-transparent">
           <Image
             src="/products/formulario2.png"
             alt="Profissional de cozinha industrial"
@@ -135,31 +135,6 @@ export function QuoteForm() {
                   placeholder="Fale sobre seu projeto, necessidades e expectativas..."
                 />
               </label>
-
-              <fieldset className="mt-1 rounded-xl border border-black/10 bg-white p-3">
-                <legend className="mx-auto px-2 text-center text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-blue)]">
-                  Qual tipo de projeto voce precisa?
-                </legend>
-                <div className="grid gap-2 sm:grid-cols-3">
-                  {(["2D", "3D", "2D e 3D"] as const).map((option) => {
-                    const active = form.projectType === option;
-                    return (
-                      <button
-                        key={option}
-                        type="button"
-                        onClick={() => setForm((current) => ({ ...current, projectType: option }))}
-                        className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition ${
-                          active
-                            ? "border-[color:var(--brand-blue)] bg-[color:var(--brand-blue)] text-white"
-                            : "border-black/15 bg-white text-[color:var(--brand-blue)] hover:bg-[color:var(--brand-blue-soft)]"
-                        }`}
-                      >
-                        {option}
-                      </button>
-                    );
-                  })}
-                </div>
-              </fieldset>
 
               <label className="mt-1 flex items-start gap-2 text-xs leading-5 text-black/70">
                 <input

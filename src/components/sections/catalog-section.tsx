@@ -26,19 +26,19 @@ export function CatalogSection() {
               <Link
                 key={item.slug}
                 href={`/categorias/${item.slug}`}
-                className="flex min-h-[320px] flex-col rounded-[1rem] border border-black/10 bg-white px-5 py-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
+                className="flex min-h-[250px] flex-col rounded-[1rem] border border-black/10 bg-white px-4 py-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] md:min-h-[260px] lg:min-h-[320px] lg:px-5 lg:py-6"
               >
-                <div className="inline-flex h-14 w-14 items-center justify-center text-[color:var(--brand-blue)]">
-                  <ItemIcon className="h-9 w-9" strokeWidth={1.5} />
+                <div className="inline-flex h-11 w-11 items-center justify-center text-[color:var(--brand-blue)] lg:h-14 lg:w-14">
+                  <ItemIcon className="h-7 w-7 lg:h-9 lg:w-9" strokeWidth={1.5} />
                 </div>
 
-                <span className="mt-4 h-[2px] w-4 rounded-full bg-[color:var(--brand-red)]" />
+                <span className="mt-3 h-[2px] w-4 rounded-full bg-[color:var(--brand-red)]" />
 
-                <h3 className="mt-4 text-[1.05rem] font-semibold uppercase tracking-[0.08em] text-[#222]">{item.cardTitle}</h3>
+                <h3 className="mt-3 text-[0.98rem] font-semibold uppercase tracking-[0.08em] text-[#222] lg:mt-4 lg:text-[1.05rem]">{item.cardTitle}</h3>
 
-                <p className="mt-4 text-[0.78rem] leading-6 text-black/66">{item.cardDescription}</p>
+                <p className="mt-3 text-[0.76rem] leading-6 text-black/66 lg:mt-4 lg:text-[0.78rem]">{item.cardDescription}</p>
 
-                <div className="mt-auto flex justify-end pt-4 text-black/80">
+                <div className="mt-auto flex justify-end pt-3 text-black/80 lg:pt-4">
                   <ArrowRight className="h-5 w-5" strokeWidth={1.8} />
                 </div>
               </Link>

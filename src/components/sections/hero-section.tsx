@@ -5,7 +5,7 @@ export function HeroSection() {
     <section id="inicio" className="w-full px-4 py-5 sm:px-6 lg:px-8">
       <div className="hero-grid glass-panel w-full overflow-hidden rounded-[2rem] px-6 py-12 text-center sm:px-8 lg:px-12 lg:py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">Institucional</p>
-        <h1 className="display-font mx-auto mt-6 max-w-4xl text-5xl font-normal leading-[0.95] sm:text-6xl lg:text-7xl">
+        <h1 className="display-font mx-auto mt-6 max-w-4xl text-[clamp(2rem,11.5vw,3rem)] font-normal leading-[1.02] sm:text-6xl sm:leading-[0.95] lg:text-7xl">
           <span className="text-[color:var(--brand-blue)]">Cozinhas Industriais e </span>
           <span className="text-[color:var(--brand-red)]">Profissionais</span>
         </h1>

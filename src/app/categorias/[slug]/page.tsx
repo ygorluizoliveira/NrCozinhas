@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { getCatalogCategoryBySlug, catalogCategories } from "@/data/catalog-categories";
 import { whatsappUrl } from "@/lib/contact";
@@ -59,7 +59,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               rel="noopener noreferrer"
               className="mt-9 inline-flex items-center gap-2 rounded-lg bg-[#1f8f5b] px-6 py-3 text-lg font-semibold text-white transition hover:bg-[#187649]"
             >
-              <MessageCircle className="h-5 w-5" />
+              <Image src="/icons/whats.jpg" alt="" width={20} height={20} className="h-5 w-5 rounded-sm object-cover" />
               Fale com um Consultor
             </a>
           </div>
