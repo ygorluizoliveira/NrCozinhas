@@ -60,12 +60,11 @@ export function QuoteForm() {
           />
         </aside>
 
-        <div className="bg-[#f7f8fb] px-5 py-7 sm:px-8 lg:px-9">
+        <div className="bg-[#f7f8fb] px-5 py-7 max-[320px]:pt-3 sm:px-8 lg:px-9">
           <div className="mx-auto max-w-xl">
-            <h3 className="mx-auto max-w-md text-center text-3xl font-black uppercase leading-[1.05] text-[color:var(--brand-blue)] sm:text-4xl">
-              Solicite seu projeto
-              <br />
-              de cozinha industrial
+            <h3 className="mx-auto max-w-md text-center text-3xl font-black uppercase leading-[1.05] text-[color:var(--brand-blue)] sm:text-4xl max-[425px]:text-[1.2rem] max-[425px]:leading-[1.15]">
+              <span className="block">Solicite seu projeto</span>
+              <span className="block">de cozinha industrial</span>
             </h3>
             <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-[color:var(--brand-red)]" />
             <p className="mx-auto mt-4 max-w-md text-center text-sm leading-6 text-black/68">
