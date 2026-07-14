@@ -56,10 +56,13 @@ export function ProductCarousel() {
   const activeProduct = products[index];
 
   return (
-    <div className="glass-panel rounded-[2rem] p-3 sm:p-8">
-      <div className="grid gap-4 sm:gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
-        <article className="section-shell overflow-hidden rounded-[1.75rem] p-4 sm:p-7">
-          <div key={index} className="carousel-fade relative h-[12.5rem] overflow-hidden rounded-[1.25rem] bg-[color:var(--brand-blue-soft)] sm:h-[17.5rem]">
+    <div className="glass-panel rounded-[2rem] p-3 sm:p-6 lg:p-7">
+      <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
+        <article className="section-shell overflow-hidden rounded-[1.5rem] p-4 sm:p-6 lg:p-7">
+          <div
+            key={index}
+            className="carousel-fade relative h-[12.5rem] overflow-hidden rounded-[1.15rem] bg-[color:var(--brand-blue-soft)] sm:h-[18rem]"
+          >
             <Image
               src={activeProduct.image}
               alt={activeProduct.name}
@@ -69,7 +72,7 @@ export function ProductCarousel() {
               sizes="(max-width: 1024px) 100vw, 60vw"
               priority
             />
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/48 to-transparent" />
             <span className="absolute left-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-blue)] sm:left-4 sm:top-4">
               Destaque
             </span>
@@ -78,15 +81,15 @@ export function ProductCarousel() {
             </span>
           </div>
 
-          <div className="mt-4 sm:mt-6">
-            <h3 className="display-font text-3xl leading-tight text-[color:var(--brand-blue)] sm:text-5xl">
+          <div className="mt-4 sm:mt-5">
+            <h3 className="display-font text-3xl leading-tight text-[color:var(--brand-blue)] sm:text-4xl lg:text-[3.1rem]">
               {activeProduct.name}
             </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/72 sm:mt-5 sm:text-base sm:leading-8">
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/72 sm:mt-4 sm:text-[1.02rem] sm:leading-8">
               {activeProduct.summary}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
+            <div className="mt-5 flex flex-wrap gap-2.5 sm:mt-6 sm:gap-3">
               {activeProduct.details.map((detail) => (
                 <span
                   key={detail}
@@ -99,12 +102,12 @@ export function ProductCarousel() {
           </div>
         </article>
 
-        <aside className="rounded-[1.75rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,var(--brand-blue),#102861)] p-4 text-white sm:p-6">
+        <aside className="rounded-[1.5rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,#f8fafe,#eef3ff)] p-4 sm:p-5 lg:p-6">
           <div className="mb-4 flex items-center justify-between gap-3 sm:mb-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/72">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-blue)]/70">
               Galeria de referência
             </p>
-            <span className="rounded-full bg-white/14 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/84">
+            <span className="rounded-full border border-[color:var(--line)] bg-white px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[color:var(--brand-blue)]/85">
               {String(index + 1).padStart(2, "0")}/{String(products.length).padStart(2, "0")}
             </span>
           </div>
@@ -120,8 +123,8 @@ export function ProductCarousel() {
                   onClick={() => setIndex(productIndex)}
                   className={`group overflow-hidden rounded-[1rem] border text-left transition duration-300 ${
                     isActive
-                      ? "border-white bg-white text-[color:var(--brand-blue)] shadow-[0_14px_28px_rgba(0,0,0,0.22)]"
-                      : "border-white/20 bg-white/8 text-white/86 hover:border-white/45 hover:bg-white/14"
+                      ? "border-[color:var(--brand-blue)]/24 bg-white text-[color:var(--brand-blue)] shadow-[0_12px_24px_rgba(21,42,108,0.14)]"
+                      : "border-[color:var(--line)] bg-white/80 text-[color:var(--brand-blue)]/84 hover:border-[color:var(--brand-blue)]/24 hover:bg-white"
                   }`}
                 >
                   <div className="relative h-20 overflow-hidden sm:h-24">
@@ -129,11 +132,15 @@ export function ProductCarousel() {
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover transition duration-500 group-hover:scale-[1.06]"
+                      className="object-cover transition duration-500 group-hover:scale-[1.05]"
                       style={{ objectPosition: product.imagePosition, transform: `scale(${product.imageScale})` }}
                       sizes="(max-width: 640px) 45vw, 18vw"
                     />
-                    <div className={`absolute inset-0 bg-[linear-gradient(145deg,rgba(181,54,65,0.42),rgba(21,42,108,0.48))] transition-opacity duration-300 ${isActive ? "opacity-20" : "opacity-0 group-hover:opacity-100"}`} />
+                    <div
+                      className={`absolute inset-0 bg-[linear-gradient(160deg,rgba(181,54,65,0.28),rgba(21,42,108,0.24))] transition-opacity duration-300 ${
+                        isActive ? "opacity-35" : "opacity-0 group-hover:opacity-100"
+                      }`}
+                    />
                   </div>
                   <div className="px-2.5 py-2.5 sm:px-3 sm:py-3">
                     <p className="text-[11px] font-semibold leading-5 sm:text-xs">{product.name}</p>
@@ -151,7 +158,11 @@ export function ProductCarousel() {
                 type="button"
                 onClick={() => setIndex(productIndex)}
                 aria-label={`Ir para ${product.name}`}
-                className={`h-2 rounded-full transition-all ${productIndex === index ? "w-7 bg-white" : "w-2 bg-white/45 hover:bg-white/70"}`}
+                className={`h-2 rounded-full transition-all ${
+                  productIndex === index
+                    ? "w-7 bg-[color:var(--brand-blue)]"
+                    : "w-2 bg-[color:var(--brand-blue)]/30 hover:bg-[color:var(--brand-blue)]/55"
+                }`}
               />
             ))}
           </div>

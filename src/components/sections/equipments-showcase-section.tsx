@@ -10,11 +10,11 @@ export function EquipmentsShowcaseSection() {
               Equipamentos para cozinha industrial
             </p>
             <h2 className="display-font mt-3 text-3xl leading-tight text-[color:var(--brand-blue)] sm:text-4xl">
-              Vitrine central de produtos em destaque.
+              Vitrine de produtos com foco tecnico e comercial.
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-black/72 sm:text-right">
-            O bloco central funciona como exposição comercial das categorias e linhas mais relevantes da operação.
+            Compare categorias, linhas e aplicacoes em um unico painel para acelerar a analise do seu projeto.
           </p>
         </div>
 

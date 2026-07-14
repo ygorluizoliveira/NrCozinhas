@@ -16,7 +16,7 @@ export function FixedCtaBar() {
       </a>
 
       <div className="fixed bottom-0 left-0 right-0 z-50 hidden w-full px-6 pb-3 md:block lg:px-8">
-        <div className="w-full rounded-2xl border border-black/10 bg-[#e6e6e9] px-6 py-5 shadow-[0_-14px_36px_rgba(15,23,42,0.14)] lg:mx-auto lg:max-w-6xl lg:rounded-xl lg:px-5 lg:py-3">
+        <div className="w-full rounded-2xl border border-black/10 bg-[#e6e6e9] px-6 py-5 shadow-[0_-14px_36px_rgba(15,23,42,0.14)] lg:rounded-xl lg:px-5 lg:py-3">
           <div className="grid items-center justify-items-center gap-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-6">
             <div className="mx-auto text-center">
               <p className="text-[clamp(1.35rem,2.2vw,2rem)] font-normal leading-tight lg:text-[1.5rem]">
