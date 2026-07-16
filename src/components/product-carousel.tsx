@@ -106,7 +106,7 @@ export function ProductCarousel() {
           </div>
         </article>
 
-        <aside className="rounded-[1.5rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,#f8fafe,#eef3ff)] p-4 sm:p-5 lg:p-6">
+        <aside className="hidden rounded-[1.5rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,#f8fafe,#eef3ff)] p-4 sm:p-5 lg:block lg:p-6">
           <div className="mb-4 flex items-center justify-between gap-3 sm:mb-5">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-blue)]/70">
               Galeria de referência
