@@ -5,40 +5,44 @@ import { useEffect, useState } from "react";
 
 const products = [
   {
-    name: "Fogoes industriais",
-    summary: "Modelos para alta producao com estrutura reforcada e queimadores de desempenho profissional.",
-    details: ["2, 4 e 6 bocas", "Opcoes com forno", "Aplicacao em cozinhas profissionais"],
-    shortTagline: "Alto desempenho em coccao",
-    image: "/products/fogoes-real.jpg",
-    imagePosition: "center 54%",
+    name: "Cocção",
+    summary:
+      "Equipamentos para cocção profissional com performance constante, aquecimento uniforme e robustez para operação intensa.",
+    details: ["Aquecimento uniforme", "Alta produtividade", "Uso profissional contínuo"],
+    shortTagline: "Performance e precisão térmica",
+    image: "/img/coccao2.jpeg",
+    imagePosition: "center 50%",
+    imageScale: 1.02,
+  },
+  {
+    name: "Utensílios e apoio",
+    summary:
+      "Itens de apoio para preparo, finalização e organização da operação, com foco em praticidade, higiene e resistência no uso diário.",
+    details: ["Rotina mais ágil", "Apoio operacional", "Durabilidade no uso diário"],
+    shortTagline: "Praticidade para a operação",
+    image: "/img/utensilios2.jpeg",
+    imagePosition: "center 50%",
     imageScale: 1.06,
   },
   {
-    name: "Coifas e exaustao",
-    summary: "Solucao para captacao de vapores, conforto operacional e organizacao tecnica do ambiente.",
-    details: ["Modelos sob medida", "Fluxo de ar otimizado", "Projetos para cozinhas industriais"],
-    shortTagline: "Captacao eficiente e segura",
-    image: "/products/coifas-real.jpg",
+    name: "Refrigeração",
+    summary:
+      "Soluções para conservação eficiente de alimentos e bebidas, mantendo estabilidade térmica e segurança para a sua operação.",
+    details: ["Controle de temperatura", "Conservação eficiente", "Segurança alimentar"],
+    shortTagline: "Conservação com eficiência",
+    image: "/img/refrigeracao2.jpeg",
     imagePosition: "center 50%",
-    imageScale: 1.1,
-  },
-  {
-    name: "Bancadas e inox",
-    summary: "Superficies resistentes para preparo, apoio e higienizacao, com foco em durabilidade e limpeza.",
-    details: ["Aco inox profissional", "Montagem customizada", "Acabamento de facil manutencao"],
-    shortTagline: "Organizacao tecnica da cozinha",
-    image: "/products/inox-real.jpg",
-    imagePosition: "center 58%",
-    imageScale: 1.08,
-  },
-  {
-    name: "Utensilios e apoio",
-    summary: "Itens complementares para ampliar a eficiencia da operacao e atender a rotina do setor alimenticio.",
-    details: ["Linha complementar", "Apoio a cozinhas comerciais", "Escolha orientada por uso"],
-    shortTagline: "Versatilidade para a operacao",
-    image: "/products/utensilios-real.jpg",
-    imagePosition: "center 52%",
     imageScale: 1.04,
+  },
+  {
+    name: "Equipamentos para Cozinhas Industriais",
+    summary:
+      "Linha completa para cozinhas industriais, reunindo tecnologia, robustez e eficiência para projetos de diferentes portes.",
+    details: ["Soluções completas", "Projetos sob demanda", "Foco técnico e comercial"],
+    shortTagline: "Estrutura completa para sua cozinha",
+    image: "/img/equipamentos2.jpeg",
+    imagePosition: "center 50%",
+    imageScale: 1.08,
   },
 ];
 
@@ -67,8 +71,8 @@ export function ProductCarousel() {
               src={activeProduct.image}
               alt={activeProduct.name}
               fill
-              className="object-cover transition duration-700"
-              style={{ objectPosition: activeProduct.imagePosition, transform: `scale(${activeProduct.imageScale})` }}
+              className="object-contain p-2 transition duration-700"
+              style={{ objectPosition: activeProduct.imagePosition }}
               sizes="(max-width: 1024px) 100vw, 60vw"
               priority
             />
@@ -132,8 +136,8 @@ export function ProductCarousel() {
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover transition duration-500 group-hover:scale-[1.05]"
-                      style={{ objectPosition: product.imagePosition, transform: `scale(${product.imageScale})` }}
+                      className="object-contain p-1.5 transition duration-500"
+                      style={{ objectPosition: product.imagePosition }}
                       sizes="(max-width: 640px) 45vw, 18vw"
                     />
                     <div
