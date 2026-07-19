@@ -71,7 +71,7 @@ export function ProductCarousel() {
               src={activeProduct.image}
               alt={activeProduct.name}
               fill
-              className="object-contain p-2 transition duration-700"
+              className="object-contain p-2 mix-blend-multiply transition duration-700"
               style={{ objectPosition: activeProduct.imagePosition }}
               sizes="(max-width: 1024px) 100vw, 60vw"
               priority
@@ -80,7 +80,7 @@ export function ProductCarousel() {
             <span className="absolute left-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-blue)] sm:left-4 sm:top-4">
               Destaque
             </span>
-            <span className="absolute bottom-3 left-3 rounded-full bg-[color:var(--brand-red)]/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white sm:bottom-4 sm:left-4">
+            <span className="absolute bottom-3 left-0 rounded-r-full bg-[color:var(--brand-red)]/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white sm:bottom-4 sm:left-0">
               {activeProduct.shortTagline}
             </span>
           </div>
@@ -136,7 +136,7 @@ export function ProductCarousel() {
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-contain p-1.5 transition duration-500"
+                      className="object-contain p-1.5 mix-blend-multiply transition duration-500"
                       style={{ objectPosition: product.imagePosition }}
                       sizes="(max-width: 640px) 45vw, 18vw"
                     />
