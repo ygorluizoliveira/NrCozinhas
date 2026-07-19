@@ -9,7 +9,6 @@ const products = [
     summary:
       "Equipamentos para cocção profissional com performance constante, aquecimento uniforme e robustez para operação intensa.",
     details: ["Aquecimento uniforme", "Alta produtividade", "Uso profissional contínuo"],
-    shortTagline: "Performance e precisão térmica",
     image: "/img/coccao2.jpeg",
     imagePosition: "center 50%",
     imageScale: 1.02,
@@ -19,7 +18,6 @@ const products = [
     summary:
       "Itens de apoio para preparo, finalização e organização da operação, com foco em praticidade, higiene e resistência no uso diário.",
     details: ["Rotina mais ágil", "Apoio operacional", "Durabilidade no uso diário"],
-    shortTagline: "Praticidade para a operação",
     image: "/img/utensilios2.jpeg",
     imagePosition: "center 50%",
     imageScale: 1.06,
@@ -29,7 +27,6 @@ const products = [
     summary:
       "Soluções para conservação eficiente de alimentos e bebidas, mantendo estabilidade térmica e segurança para a sua operação.",
     details: ["Controle de temperatura", "Conservação eficiente", "Segurança alimentar"],
-    shortTagline: "Conservação com eficiência",
     image: "/img/refrigeracao2.jpeg",
     imagePosition: "center 50%",
     imageScale: 1.04,
@@ -39,7 +36,6 @@ const products = [
     summary:
       "Linha completa para cozinhas industriais, reunindo tecnologia, robustez e eficiência para projetos de diferentes portes.",
     details: ["Soluções completas", "Projetos sob demanda", "Foco técnico e comercial"],
-    shortTagline: "Estrutura completa para sua cozinha",
     image: "/img/equipamentos2.jpeg",
     imagePosition: "center 50%",
     imageScale: 1.08,
@@ -79,9 +75,6 @@ export function ProductCarousel() {
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/48 to-transparent" />
             <span className="absolute left-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-blue)] sm:left-4 sm:top-4">
               Destaque
-            </span>
-            <span className="absolute bottom-3 left-0 rounded-r-full bg-[color:var(--brand-red)]/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white sm:bottom-4 sm:left-0">
-              {activeProduct.shortTagline}
             </span>
           </div>
 
@@ -148,7 +141,6 @@ export function ProductCarousel() {
                   </div>
                   <div className="px-2.5 py-2.5 sm:px-3 sm:py-3">
                     <p className="text-[11px] font-semibold leading-5 sm:text-xs">{product.name}</p>
-                    <p className="mt-1 text-[10px] leading-4 opacity-80">{product.shortTagline}</p>
                   </div>
                 </button>
               );
