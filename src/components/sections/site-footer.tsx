@@ -31,7 +31,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-5xl">Cozinhas Profissionais</h3>
+            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-4xl">Cozinhas Profissionais</h3>
             <ul className="mt-4 grid gap-2 text-[0.98rem] text-[#1d2435] md:mt-6 md:gap-3 md:text-[1.06rem]">
               <li>Todos os cases</li>
               <li>Para Hotel</li>
@@ -43,7 +43,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-5xl">Atendimento</h3>
+            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-4xl">Atendimento</h3>
             <ul className="mt-4 grid gap-2 text-[0.98rem] text-[#1d2435] md:mt-6 md:gap-3 md:text-[1.06rem]">
               <li>Não operamos com loja física.</li>
               <li>Atendimento comercial por agendamento.</li>
@@ -53,7 +53,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-5xl">Fale Conosco</h3>
+            <h3 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#1b2030] md:text-4xl">Fale Conosco</h3>
             <ul className="mt-4 grid gap-2 text-[0.98rem] text-[#1d2435] md:mt-6 md:gap-3 md:text-[1.06rem]">
               <li className="flex items-center gap-2"><Image src="/icons/whats.jpg" alt="" width={16} height={16} className="h-4 w-4 rounded-sm object-cover" /> <a href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")} target="_blank" rel="noopener noreferrer">(21) 96914-6705</a></li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <span>contato@nrcozinhas.com.br</span></li>
