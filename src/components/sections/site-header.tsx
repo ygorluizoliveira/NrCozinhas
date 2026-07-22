@@ -45,12 +45,12 @@ export function SiteHeader() {
 
   return (
     <section
-      className={`sticky top-0 z-50 border-b border-[color:var(--line)] bg-white/95 px-0 pt-0 transition-transform duration-300 ${
+      className={`sticky top-0 z-50 border-b border-white/20 bg-transparent px-0 pt-0 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="w-full bg-[color:var(--brand-red)] text-white">
-        <div className="grid w-full grid-cols-[1fr_auto] items-center gap-1 px-2.5 py-0.5 text-[9px] font-medium leading-tight md:gap-2 md:px-8 md:py-1.5 md:text-xs lg:px-12">
+        <div className="grid w-full grid-cols-[1fr_auto] items-center gap-1 px-2.5 py-0.25 text-[9px] font-medium leading-tight md:gap-2 md:px-8 md:py-1 md:text-xs lg:px-12">
           <div className="min-w-0">
             <a
               href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")}
@@ -69,10 +69,10 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div className="w-full px-2.5 py-0.5 md:px-8 md:py-2 lg:px-12">
-        <div className="rounded-[1rem] bg-white px-2.5 py-1 shadow-[var(--shadow)] md:rounded-[1.6rem] md:px-6 md:py-2.5 lg:px-8">
+      <div className="w-full bg-white px-2.5 py-0.5 md:px-8 md:py-1 lg:px-12">
+        <div className="px-1 py-0.5 md:px-2 md:py-1">
           <div className="flex items-center justify-between gap-2">
-            <a href="#inicio" className="relative block h-[2rem] w-[7rem] shrink-0 md:h-[2.9rem] md:w-[10.4rem] lg:h-[3rem] lg:w-[10.8rem]">
+            <a href="#inicio" className="relative block h-[1.8rem] w-[6.4rem] shrink-0 md:h-[2.5rem] md:w-[9rem] lg:h-[2.65rem] lg:w-[9.6rem]">
               <Image
                 src="/icons/logo.PNG"
                 alt="NR Cozinhas"
@@ -83,7 +83,7 @@ export function SiteHeader() {
             </a>
 
             <details className="group relative md:hidden">
-              <summary className="inline-flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-lg border border-[color:var(--line)] text-[color:var(--brand-blue)] transition hover:bg-[color:var(--brand-blue-soft)] [&::-webkit-details-marker]:hidden">
+              <summary className="inline-flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-none border border-[color:var(--line)] text-[color:var(--brand-blue)] transition hover:bg-[color:var(--brand-blue-soft)] [&::-webkit-details-marker]:hidden">
                 <Menu className="h-4.5 w-4.5" />
               </summary>
 

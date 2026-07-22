@@ -79,14 +79,17 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </a>
           </div>
 
-          <div className="relative min-h-[300px] sm:min-h-[360px]">
-            <div className="pointer-events-none absolute inset-[7%] z-10 rounded-[1.5rem] border-2 border-[color:var(--brand-red)]" />
+          <div className="relative min-h-[340px] sm:min-h-[400px] lg:min-h-[460px]">
 
             <Image
               src={category.image}
               alt={category.name}
               fill
-              className={slug === "refrigeracao" ? "z-0 object-contain mix-blend-multiply" : "z-0 object-contain"}
+              className={
+                slug === "refrigeracao"
+                  ? "z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15] mix-blend-multiply"
+                  : "z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15]"
+              }
               sizes="(max-width: 1024px) 100vw, 55vw"
               priority
             />

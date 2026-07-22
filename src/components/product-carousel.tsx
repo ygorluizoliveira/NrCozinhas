@@ -56,9 +56,9 @@ export function ProductCarousel() {
   const activeProduct = products[index];
 
   return (
-    <div className="glass-panel rounded-[2rem] p-3 sm:p-6 lg:p-7">
+    <div className="glass-panel rounded-[2rem] p-3 !border-0 sm:p-6 lg:p-7">
       <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
-        <article className="section-shell overflow-hidden rounded-[1.5rem] p-4 sm:p-6 lg:p-7">
+        <article className="section-shell overflow-hidden rounded-[1.5rem] !border-0 p-4 sm:p-6 lg:p-7">
           <div
             key={index}
             className="carousel-fade relative h-[12.5rem] overflow-hidden rounded-[1.15rem] bg-[color:var(--brand-blue-soft)] sm:h-[18rem]"
@@ -90,7 +90,7 @@ export function ProductCarousel() {
               {activeProduct.details.map((detail) => (
                 <span
                   key={detail}
-                  className="rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-[color:var(--brand-blue)] sm:px-4 sm:py-2 sm:text-xs sm:uppercase sm:tracking-[0.16em]"
+                  className="rounded-full bg-[color:var(--brand-blue-soft)] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-[color:var(--brand-blue)] sm:px-4 sm:py-2 sm:text-xs sm:uppercase sm:tracking-[0.16em]"
                 >
                   {detail}
                 </span>
@@ -99,12 +99,12 @@ export function ProductCarousel() {
           </div>
         </article>
 
-        <aside className="hidden rounded-[1.5rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,#f8fafe,#eef3ff)] p-4 sm:p-5 lg:block lg:p-6">
+        <aside className="hidden rounded-[1.5rem] bg-[linear-gradient(180deg,#f8fafe,#eef3ff)] p-4 sm:p-5 lg:block lg:p-6">
           <div className="mb-4 flex items-center justify-between gap-3 sm:mb-5">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-blue)]/70">
               Galeria de referência
             </p>
-            <span className="rounded-full border border-[color:var(--line)] bg-white px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[color:var(--brand-blue)]/85">
+            <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[color:var(--brand-blue)]/85 shadow-[0_4px_12px_rgba(21,42,108,0.08)]">
               {String(index + 1).padStart(2, "0")}/{String(products.length).padStart(2, "0")}
             </span>
           </div>
@@ -118,10 +118,10 @@ export function ProductCarousel() {
                   key={product.name}
                   type="button"
                   onClick={() => setIndex(productIndex)}
-                  className={`group overflow-hidden rounded-[1rem] border text-left transition duration-300 ${
+                  className={`group overflow-hidden rounded-[1rem] text-left transition duration-300 ${
                     isActive
-                      ? "border-[color:var(--brand-blue)]/24 bg-white text-[color:var(--brand-blue)] shadow-[0_12px_24px_rgba(21,42,108,0.14)]"
-                      : "border-[color:var(--line)] bg-white/80 text-[color:var(--brand-blue)]/84 hover:border-[color:var(--brand-blue)]/24 hover:bg-white"
+                      ? "bg-white text-[color:var(--brand-blue)] shadow-[0_12px_24px_rgba(21,42,108,0.14)] ring-1 ring-[color:var(--brand-blue)]/15"
+                      : "bg-white/80 text-[color:var(--brand-blue)]/84 hover:bg-white"
                   }`}
                 >
                   <div className="relative h-20 overflow-hidden sm:h-24">
@@ -145,6 +145,28 @@ export function ProductCarousel() {
                 </button>
               );
             })}
+          </div>
+
+          <div className="mt-5 rounded-[1.2rem] bg-white p-4 shadow-[0_12px_28px_rgba(21,42,108,0.08)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-red)]">Destaque técnico</p>
+            <h4 className="mt-3 text-lg font-semibold leading-tight text-[color:var(--brand-blue)]">
+              {activeProduct.name}
+            </h4>
+            <p className="mt-2 text-sm leading-7 text-black/68">
+              {activeProduct.summary}
+            </p>
+
+            <div className="mt-4 grid gap-2">
+              {activeProduct.details.map((detail) => (
+                <div
+                  key={`${activeProduct.name}-${detail}`}
+                  className="flex items-center gap-2 rounded-xl bg-[color:var(--brand-blue-soft)] px-3 py-2 text-sm font-medium text-[color:var(--brand-blue)]"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--brand-red)]" />
+                  <span>{detail}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-4 flex items-center gap-2 sm:mt-5">
