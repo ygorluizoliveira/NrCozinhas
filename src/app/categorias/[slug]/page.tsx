@@ -108,7 +108,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </article>
 
         <article className="rounded-[1.25rem] border border-black/10 bg-white p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--brand-red)]">Aplicacoes atendidas</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--brand-red)]">Aplicacões atendidas</p>
           <ul className="mt-4 grid gap-3">
             {category.applications.map((item) => (
               <li key={`${category.slug}-app-${item}`} className="flex items-center gap-2 text-sm text-black/78 sm:text-base">

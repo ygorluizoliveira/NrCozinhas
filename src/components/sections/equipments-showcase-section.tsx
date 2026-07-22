@@ -10,11 +10,11 @@ export function EquipmentsShowcaseSection() {
               Equipamentos para cozinha industrial
             </p>
             <h2 className="display-font mt-3 text-3xl leading-tight text-[color:var(--brand-blue)] sm:text-4xl">
-              Vitrine de produtos com foco tecnico e comercial.
+              Vitrine de produtos com foco técnico e comercial.
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-black/72 sm:text-right">
-            Compare categorias, linhas e aplicacoes em um unico painel para acelerar a analise do seu projeto.
+            Compare categorias, linhas e aplicações em um único painel para acelerar a análise do seu projeto.
           </p>
         </div>
 

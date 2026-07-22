@@ -51,7 +51,7 @@ export const catalogCategories: CatalogCategory[] = [
   },
   {
     slug: "mobiliarios",
-    name: "Mobiliarios",
+    name: "Mobiliários",
     cardTitle: "Mobiliários",
     cardDescription: "Mobiliários em aço inox, polipropileno ou madeira desenvolvidos para unir funcionalidade, resistência e organização",
     pageTitle: "Mobiliários para\nCozinha Industrial",
@@ -62,12 +62,12 @@ export const catalogCategories: CatalogCategory[] = [
     highlights: ["Estrutura em inox", "Alta durabilidade", "Facil higienizacao"],
     applications: ["Bancadas", "Mesas de apoio", "Areas de preparo"],
     image: "/img/mobiliarios1.png",
-    ctaMessage: "Olá, quero falar com um consultor sobre mobiliarios para cozinha industrial.",
+    ctaMessage: "Olá, quero falar com um consultor sobre mobiliários para cozinha industrial.",
     iconKey: "mobiliarios",
   },
   {
     slug: "utensilios",
-    name: "Utensilios de Cozinha",
+    name: "Utensílios de Cozinha",
     cardTitle: "Utensílios de cozinha",
     cardDescription: "Utensílios profissionais que oferecem praticidade e durabilidade para a operação diária.",
     pageTitle: "Utensílios Para\nCozinha Industrial",
@@ -78,7 +78,7 @@ export const catalogCategories: CatalogCategory[] = [
     highlights: ["Praticidade diária", "Qualidade profissional", "Maior agilidade"],
     applications: ["Preparo", "Distribuição", "Finalização"],
     image: "/img/utensilios1.png",
-    ctaMessage: "Olá, quero falar com um consultor sobre utensilios profissionais.",
+    ctaMessage: "Olá, quero falar com um consultor sobre utensílios profissionais.",
     iconKey: "utensilios",
   },
   {
