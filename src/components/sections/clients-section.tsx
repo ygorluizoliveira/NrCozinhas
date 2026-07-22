@@ -6,8 +6,8 @@ export function ClientsSection() {
       <div className="w-full">
         <div className="mb-6">
           <p className="text-center text-2xl font-bold tracking-tight sm:text-3xl">
-            <span className="text-[color:var(--brand-blue)]">EMPRESAS QUE </span>
-            <span className="text-[color:var(--brand-red)]">ATENDEMOS</span>
+            <span className="text-[color:var(--brand-blue)]">ALGUNS DE NOSSOS </span>
+            <span className="text-[color:var(--brand-red)]">CLIENTES</span>
           </p>
           <span className="mx-auto mt-2 block h-[2px] w-28 rounded-full bg-gradient-to-r from-[color:var(--brand-blue)] to-[color:var(--brand-red)]" />
         </div>

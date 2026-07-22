@@ -113,7 +113,7 @@ export const segments = [
     ctaMessage: "Olá, quero orçamento para cozinha de hotel ou operação corporativa.",
   },
   {
-    title: "Escolas e instituições",
+    title: "Instituições de ensino",
     description: "Configuração técnica para preparo seguro, organização de fluxo e rotinas de alto volume.",
     icon: ClipboardList,
     ctaMessage: "Olá, quero orçamento para cozinha institucional.",

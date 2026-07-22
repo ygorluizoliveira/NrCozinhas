@@ -14,11 +14,7 @@ export function HeroSection() {
           comercial para projetos profissionais.
         </p>
         <p className="mx-auto mt-8 max-w-5xl text-base leading-8 text-black/80 sm:text-lg">
-          A NR Cozinhas é especializada na revenda de equipamentos para
-          <strong> cozinhas industriais e profissionais, oferecendo soluções completas para o setor alimentício</strong>.
-          Atuamos desde o fornecimento de equipamentos e utensílios até a elaboração de projetos de cozinhas
-          industriais. <strong>Trabalhamos com foco em qualidade</strong>, confiabilidade e atendimento profissional,
-          garantindo sucesso aos nossos clientes.
+         A NR cozinhas é especializada na venda de equipamentos para cozinhas de pequenos e grandes portes, indústrias, profissionais ou domiciliar, oferecendo soluções completas para setor de A&B
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <a className="button-brand px-6 py-3 text-center text-sm font-semibold" href="#orcamento">

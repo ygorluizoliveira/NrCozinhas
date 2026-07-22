@@ -68,7 +68,7 @@ export function QuoteForm() {
             </h3>
             <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-[color:var(--brand-red)]" />
             <p className="mx-auto mt-4 max-w-md text-center text-sm leading-6 text-black/68">
-              Preencha o formulario abaixo e nossa equipe entrara em contato para entender seu projeto.
+              Preencha o formulário e nossa equipe entrará em contato para te auxiliar no seu projeto.
             </p>
 
             <form className="mt-6 grid gap-3" onSubmit={handleSubmit}>
@@ -84,9 +84,8 @@ export function QuoteForm() {
               </label>
 
               <label className="grid gap-1.5 text-sm font-medium text-black/80">
-                Email*
+                Email
                 <input
-                  required
                   type="email"
                   className="rounded-xl border border-black/14 bg-white px-4 py-2.5 outline-none transition focus:border-[color:var(--brand-blue)]"
                   value={form.email}
@@ -107,9 +106,8 @@ export function QuoteForm() {
               </label>
 
               <label className="grid gap-1.5 text-sm font-medium text-black/80">
-                Segmento de Atuacao*
+                Segmento de Atuação
                 <select
-                  required
                   className="rounded-xl border border-black/14 bg-white px-4 py-2.5 outline-none transition focus:border-[color:var(--brand-blue)]"
                   value={form.segment}
                   onChange={(event) => setForm((current) => ({ ...current, segment: event.target.value }))}
@@ -117,16 +115,15 @@ export function QuoteForm() {
                   <option value="">Selecione o segmento</option>
                   <option>Restaurante</option>
                   <option>Hotel</option>
-                  <option>Escola / Instituicao</option>
-                  <option>Industria alimenticia</option>
+                  <option>Escola / Instituição</option>
+                  <option>Indústria alimentícia</option>
                   <option>Outro</option>
                 </select>
               </label>
 
               <label className="grid gap-1.5 text-sm font-medium text-black/80">
-                Conte-nos sobre seu projeto*
+                Conte-nos sobre seu projeto
                 <textarea
-                  required
                   rows={4}
                   className="rounded-xl border border-black/14 bg-white px-4 py-2.5 outline-none transition focus:border-[color:var(--brand-blue)]"
                   value={form.details}
@@ -142,17 +139,17 @@ export function QuoteForm() {
                   onChange={(event) => setForm((current) => ({ ...current, consent: event.target.checked }))}
                   className="mt-0.5 h-4 w-4 rounded border border-black/25"
                 />
-                <span>Autorizo o uso dos meus dados para contato e envio de comunicacoes relacionadas a minha solicitacao.</span>
+                <span>Autorizo o uso dos meus dados para contato e envio de comunicações relacionadas à minha solicitação.</span>
               </label>
 
-              <button type="submit" className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[color:var(--brand-blue)] px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-[#102257]">
+              <button type="submit" className="quote-submit-button mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[color:var(--brand-blue)] px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-[#102257]">
                 <Send className="h-4 w-4" />
-                Enviar solicitacao
+                Enviar solicitação
               </button>
 
               <p className="flex items-center justify-center gap-1.5 text-xs text-black/58">
                 <ShieldCheck className="h-4 w-4" />
-                Seus dados estao seguros conosco.
+                Seus dados estão seguros conosco.
               </p>
             </form>
           </div>

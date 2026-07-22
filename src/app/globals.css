@@ -203,3 +203,27 @@ select {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 320px) {
+  .quote-submit-button {
+    font-size: 9px !important;
+    letter-spacing: 0.02em !important;
+    gap: 0.3rem !important;
+    padding-top: 0.55rem !important;
+    padding-bottom: 0.55rem !important;
+  }
+
+  .quote-submit-button svg {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+  }
+
+  .quote-section-tight {
+    padding-bottom: 0 !important;
+  }
+
+  .segments-section-tight {
+    padding-top: 0 !important;
+    margin-top: -0.35rem !important;
+  }
+}

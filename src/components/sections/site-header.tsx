@@ -1,11 +1,54 @@
+"use client";
+
 import Image from "next/image";
 import { Clock3, Menu } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { menuItems } from "@/data/home-content";
 import { whatsappUrl } from "@/lib/contact";
 
 export function SiteHeader() {
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+
+      // Keep header visible near the top and ignore tiny scroll jitter.
+      if (currentY <= 8) {
+        setIsVisible(true);
+        lastScrollY.current = currentY;
+        return;
+      }
+
+      if (Math.abs(delta) < 4) {
+        return;
+      }
+
+      if (delta > 0) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <section className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-white/95 px-0 pt-0">
+    <section
+      className={`sticky top-0 z-50 border-b border-[color:var(--line)] bg-white/95 px-0 pt-0 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="w-full bg-[color:var(--brand-red)] text-white">
         <div className="grid w-full grid-cols-[1fr_auto] items-center gap-1 px-2.5 py-0.5 text-[9px] font-medium leading-tight md:gap-2 md:px-8 md:py-1.5 md:text-xs lg:px-12">
           <div className="min-w-0">
