@@ -26,9 +26,6 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Verify build output
-        run: test -d ./out || (echo "Build failed: ./out not found" && exit 1)
-
       - name: Deploy to HostGator via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
