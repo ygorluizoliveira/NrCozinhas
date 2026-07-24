@@ -12,7 +12,7 @@ export function CatalogSection() {
   } as const;
 
   return (
-    <section id="catalogo" className="w-full px-4 py-10 max-[425px]:pt-3 sm:px-6 lg:px-8">
+    <section id="catalogo" className="w-full px-4 py-10 max-[768px]:py-6 max-[425px]:pt-3 sm:px-6 lg:px-8">
       <div className="w-full">
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)] max-[768px]:text-sm">Catalogo de Equipamentos</p>

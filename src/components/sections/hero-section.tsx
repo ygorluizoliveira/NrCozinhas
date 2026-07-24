@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="w-full px-4 py-5 sm:px-6 lg:px-8">
-      <div className="hero-grid glass-panel w-full overflow-hidden rounded-[2rem] px-6 py-12 text-center sm:px-8 lg:px-12 lg:py-16">
+    <section id="inicio" className="w-full px-4 py-5 max-[768px]:px-0 max-[768px]:py-3 sm:px-6 lg:px-8">
+      <div className="hero-grid glass-panel w-full overflow-hidden rounded-[2rem] px-6 py-12 text-center max-[768px]:rounded-none max-[768px]:!border-0 max-[768px]:shadow-none max-[768px]:py-8 sm:px-8 lg:px-12 lg:py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">Institucional</p>
         <h1 className="display-font mx-auto mt-6 max-w-4xl text-[clamp(2rem,11.5vw,3rem)] font-normal leading-[1.02] sm:text-6xl sm:leading-[0.95] lg:text-7xl">
           <span className="text-[color:var(--brand-blue)]">Cozinhas Industriais e </span>

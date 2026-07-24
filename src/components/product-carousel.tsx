@@ -56,9 +56,9 @@ export function ProductCarousel() {
   const activeProduct = products[index];
 
   return (
-    <div className="glass-panel rounded-[2rem] p-3 !border-0 sm:p-6 lg:p-7">
+    <div className="glass-panel rounded-[2rem] p-3 !border-0 max-[768px]:rounded-none max-[768px]:p-0 max-[768px]:shadow-none sm:p-6 lg:p-7">
       <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
-        <article className="section-shell overflow-hidden rounded-[1.5rem] !border-0 p-4 sm:p-6 lg:p-7">
+        <article className="section-shell overflow-hidden rounded-[1.5rem] !border-0 p-4 max-[768px]:rounded-none max-[768px]:shadow-none sm:p-6 lg:p-7">
           <div
             key={index}
             className="carousel-fade relative h-[12.5rem] overflow-hidden rounded-[1.15rem] bg-[color:var(--brand-blue-soft)] sm:h-[18rem]"

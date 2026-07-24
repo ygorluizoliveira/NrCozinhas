@@ -14,7 +14,7 @@ import { SiteHeader } from "@/components/sections/site-header";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col pb-24 sm:pb-28">
+    <main className="flex flex-1 flex-col pb-24 max-[768px]:pb-14 sm:pb-28">
       <SiteHeader />
       <section className="w-full border-y border-black/10 bg-white/75">
         <Image

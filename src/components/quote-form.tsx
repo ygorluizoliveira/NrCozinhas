@@ -47,7 +47,7 @@ export function QuoteForm() {
   }
 
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-white shadow-[0_24px_56px_rgba(21,42,108,0.12)]">
+    <div className="overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-white shadow-[0_24px_56px_rgba(21,42,108,0.12)] max-[768px]:rounded-none max-[768px]:border-0 max-[768px]:shadow-none">
       <div className="grid lg:grid-cols-[1.06fr_0.94fr]">
         <aside className="relative min-h-[580px] overflow-hidden bg-[#142a63] max-[425px]:min-h-[430px] max-[425px]:bg-transparent">
           <Image
