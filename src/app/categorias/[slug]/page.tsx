@@ -85,11 +85,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               src={category.image}
               alt={category.name}
               fill
-              className={
-                slug === "refrigeracao"
-                  ? "z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15] mix-blend-multiply"
-                  : "z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15]"
-              }
+              className="z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15]"
               sizes="(max-width: 1024px) 100vw, 55vw"
               priority
             />
