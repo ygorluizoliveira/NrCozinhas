@@ -21,6 +21,31 @@ npm run start
 npm run lint
 ```
 
+## Deploy automatico (GitHub Actions -> HostGator)
+
+Este projeto agora esta preparado para deploy direto pelo GitHub, sem abrir o cPanel a cada publicacao.
+
+Workflow: [.github/workflows/deploy-hostgator.yml](.github/workflows/deploy-hostgator.yml)
+
+### Como ativar
+
+1. No GitHub do repositorio, abra `Settings > Secrets and variables > Actions`.
+2. Crie os secrets abaixo:
+	- `FTP_SERVER` (ex.: `ftp.seudominio.com`)
+	- `FTP_USERNAME`
+	- `FTP_PASSWORD`
+	- `FTP_PROTOCOL` (`ftp` ou `ftps`)
+	- `FTP_PORT` (normalmente `21`)
+	- `FTP_SERVER_DIR` (ex.: `/public_html/`)
+3. Garanta que sua branch de producao seja `main`.
+4. Ao fazer push na `main`, o deploy roda automaticamente.
+
+### Observacoes tecnicas
+
+- O Next.js foi configurado para export estatico em [next.config.ts](next.config.ts).
+- O build gera a pasta `out/`, que e enviada para o HostGator via FTP.
+- Se quiser publicar por outra branch, altere o bloco `on.push.branches` no workflow.
+
 ## Objetivo desta base
 
 Este projeto foi inicializado para servir como estrutura de um site com:
