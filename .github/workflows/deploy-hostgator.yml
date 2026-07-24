@@ -25,6 +25,7 @@ jobs:
 
       - name: Build static site
         run: npm run build
+
       - name: Verify build output
         run: test -d ./out || (echo "Build failed: ./out not found" && exit 1)
 
@@ -40,4 +41,3 @@ jobs:
             **/.git*
             **/.git/**
             **/node_modules/**
-
