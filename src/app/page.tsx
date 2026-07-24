@@ -18,7 +18,7 @@ export default function Home() {
       <SiteHeader />
       <section className="w-full overflow-hidden border-y border-black/10 bg-white/75">
         <Image
-          src="/img/banner_new_v2.jpeg"
+          src="/img/banner_new2.jpeg"
           alt="Banner institucional NR Cozinhas"
           width={1920}
           height={560}
