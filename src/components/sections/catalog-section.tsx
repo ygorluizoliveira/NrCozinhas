@@ -12,10 +12,10 @@ export function CatalogSection() {
   } as const;
 
   return (
-    <section id="catalogo" className="w-full px-4 py-10 max-[425px]:pt-3 sm:px-6 lg:px-8">
+    <section id="catalogo" className="w-full px-4 py-10 max-[768px]:py-6 max-[425px]:pt-3 sm:px-6 lg:px-8">
       <div className="w-full">
         <div className="mb-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">Catalogo de Equipamentos</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)] max-[768px]:text-sm">Catalogo de Equipamentos</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
@@ -34,9 +34,9 @@ export function CatalogSection() {
 
                 <span className="mt-3 h-[2px] w-4 rounded-full bg-[color:var(--brand-red)]" />
 
-                <h3 className="mt-3 text-[0.98rem] font-semibold uppercase tracking-[0.08em] text-[#222] lg:mt-4 lg:text-[1.05rem]">{item.cardTitle}</h3>
+                <h3 className="mt-3 text-[0.98rem] font-semibold uppercase tracking-[0.08em] text-[#222] max-[768px]:text-[1.1rem] lg:mt-4 lg:text-[1.05rem]">{item.cardTitle}</h3>
 
-                <p className="mt-3 text-[0.76rem] leading-6 text-black/66 lg:mt-4 lg:text-[0.78rem]">{item.cardDescription}</p>
+                <p className="mt-3 text-[0.76rem] leading-6 text-black/66 max-[768px]:text-[0.88rem] max-[768px]:leading-7 lg:mt-4 lg:text-[0.78rem]">{item.cardDescription}</p>
 
                 <div className="mt-auto flex justify-end pt-3 text-black/80 lg:pt-4">
                   <ArrowRight className="h-5 w-5" strokeWidth={1.8} />

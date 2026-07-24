@@ -79,14 +79,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </a>
           </div>
 
-          <div className="relative min-h-[300px] sm:min-h-[360px]">
-            <div className="pointer-events-none absolute inset-[7%] z-10 rounded-[1.5rem] border-2 border-[color:var(--brand-red)]" />
+          <div className="relative min-h-[340px] sm:min-h-[400px] lg:min-h-[460px]">
 
             <Image
               src={category.image}
               alt={category.name}
               fill
-              className={slug === "refrigeracao" ? "z-0 object-contain mix-blend-multiply" : "z-0 object-contain"}
+              className="z-0 object-contain scale-[1.08] sm:scale-[1.12] lg:scale-[1.15]"
               sizes="(max-width: 1024px) 100vw, 55vw"
               priority
             />
@@ -108,7 +107,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </article>
 
         <article className="rounded-[1.25rem] border border-black/10 bg-white p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--brand-red)]">Aplicacoes atendidas</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--brand-red)]">Aplicacões atendidas</p>
           <ul className="mt-4 grid gap-3">
             {category.applications.map((item) => (
               <li key={`${category.slug}-app-${item}`} className="flex items-center gap-2 text-sm text-black/78 sm:text-base">
