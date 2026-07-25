@@ -66,7 +66,7 @@ export function SiteFooter() {
                 <Image src="/icons/whats.jpg" alt="" width={16} height={16} className="h-4 w-4 rounded-sm object-cover" />
                 <a href={whatsappUrl("Olá, gostaria de falar com a NR Cozinhas.")} target="_blank" rel="noopener noreferrer">(21) 96914-6705</a>
               </li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <span>nrpassoscozinhas@gmail.com</span></li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <span>comercial@nrcozinhas.com.br</span></li>
               <li className="flex items-center gap-2"><Clock3 className="h-4 w-4" /> <span>Seg à Sex 08:00 às 17:00</span></li>
               <li className="flex items-center gap-2"><Settings className="h-4 w-4" /> <span>Assistência Técnica</span></li>
               <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> <span>Política de Dados</span></li>
