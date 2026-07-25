@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "NR Cozinhas | Ambientes planejados sob medida",
   description:
     "Site institucional responsivo para exposicao de mercadorias e solicitacao de orcamentos da NR Cozinhas.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export const viewport: Viewport = {
