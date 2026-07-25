@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/nata7932/prod/public_html
+    - export DEPLOYPATH=/home1/nata7932/public_html
     - /bin/cp -R out/* $DEPLOYPATH
