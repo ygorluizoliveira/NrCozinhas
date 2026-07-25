@@ -64,7 +64,7 @@ export function SiteHeader() {
           </div>
           <p className="ml-auto flex items-center justify-end gap-1 text-right md:gap-2">
             <Clock3 className="h-3.5 w-3.5 md:h-4 md:w-4" strokeWidth={1.9} />
-            <span className="whitespace-nowrap">Seg a Sex 08:00 as 17:00</span>
+            <span className="whitespace-nowrap">Seg a Sex 08:00 as 12:00</span>
           </p>
         </div>
       </div>
