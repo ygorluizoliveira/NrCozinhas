@@ -93,7 +93,7 @@ export const catalogCategories: CatalogCategory[] = [
       "Tecnologia que combina cocção a vapor e ar quente em um único equipamento, proporcionando mais produtividade, padronização e qualidade em cada preparo. Ideal para cozinhas que exigem o máximo desempenho.",
     highlights: ["Padronização", "Versatilidade", "Eficiência energética"],
     applications: ["Assados", "Cocção a vapor", "Finalização de pratos"],
-    image: "/img/fornos_combinados.png",
+    image: "/img/fornos_combinados_2.PNG",
     ctaMessage: "Olá, quero falar com um consultor sobre fornos combinados.",
     iconKey: "fornos",
   },
