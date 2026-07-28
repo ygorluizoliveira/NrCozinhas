@@ -2,9 +2,9 @@ import { ProductCarousel } from "@/components/product-carousel";
 
 export function EquipmentsShowcaseSection() {
   return (
-    <section id="equipamentos" className="w-full px-4 py-10 max-[768px]:px-0 max-[768px]:py-6 max-[425px]:pb-4 sm:px-6 lg:px-8">
+    <section id="equipamentos" className="w-full px-4 py-10 max-[768px]:bg-[#f4f6fb] max-[768px]:px-0 max-[768px]:py-6 max-[425px]:pb-4 sm:px-6 lg:px-8">
       <div className="w-full">
-        <div className="mb-6 flex flex-col gap-3 px-4 max-[768px]:px-4 sm:flex-row sm:items-end sm:justify-between sm:px-0">
+        <div className="mb-6 flex flex-col gap-3 px-4 max-[768px]:relative max-[768px]:z-10 max-[768px]:bg-[#f4f6fb] max-[768px]:px-4 sm:flex-row sm:items-end sm:justify-between sm:px-0">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--brand-red)]">
               Equipamentos para cozinha industrial
